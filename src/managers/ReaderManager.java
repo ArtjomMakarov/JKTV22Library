@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package managers;
+
+
+import entity.Reader;
+import java.util.Scanner;
+/**
+ *
+ * @author pupil
+ */
+public class ReaderManager {
+private final Scanner scanner;
+    public ReaderManager(Scanner scanner) {
+        this.scanner = scanner;
+    }
+    public Reader addReader() {
+         Reader reader = new Reader();
+                    System.out.print("Enter firstname: ");
+                    reader.setFirstname(scanner.nextLine());
+                    System.out.print("Enter lastname: ");
+                    reader.setLastname(scanner.nextLine());
+                    System.out.print("Enter phone: ");
+                    reader.setPhone(scanner.nextLine());
+                    System.out.println(reader.toString());
+                    return reader;
+    }
+    
+}
